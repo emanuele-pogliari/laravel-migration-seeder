@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Electric LED";
+    src: url("/resources/fonts/EHSMB.TTF");
+}
+
+body {
+    font-family: "Electric LED";
+    color: #f1bd5a;
+}
+
+th {
+    font-size: 20px;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+}
+
+body {
+    background-color: #222;
+}
+
+#monitor {
+    width: 1800px;
+    background: #000;
+    position: relative;
+    border-top: 3px solid #888;
+    padding: 2% 2% 4% 2%;
+    border-radius: 10px;
+    border-bottom-left-radius: 50% 2%;
+    border-bottom-right-radius: 50% 2%;
+}
+
+@media all and (min-width: 960px) {
+    #monitor {
+        -webkit-animation: tvflicker 0.2s infinite alternate;
+        -moz-animation: tvflicker 0.5s infinite alternate;
+        -o-animation: tvflicker 0.5s infinite alternate;
+        animation: tvflicker 0.5s infinite alternate;
+    }
+
+    @-webkit-keyframes tvflicker {
+        0% {
+            box-shadow: 0 0 100px 0 rgba(200, 235, 255, 0.4);
+        }
+        100% {
+            box-shadow: 0 0 95px 0 rgba(200, 230, 255, 0.45);
+        }
+    }
+    @-moz-keyframes tvflicker {
+        0% {
+            box-shadow: 0 0 100px 0 rgba(225, 235, 255, 0.4);
+        }
+        100% {
+            box-shadow: 0 0 60px 0 rgba(200, 220, 255, 0.6);
+        }
+    }
+    @-o-keyframes tvflicker {
+        0% {
+            box-shadow: 0 0 100px 0 rgba(225, 235, 255, 0.4);
+        }
+        100% {
+            box-shadow: 0 0 60px 0 rgba(200, 220, 255, 0.6);
+        }
+    }
+    @keyframes tvflicker {
+        0% {
+            box-shadow: 0 0 100px 0 rgba(225, 235, 255, 0.4);
+        }
+        100% {
+            box-shadow: 0 0 60px 0 rgba(200, 220, 255, 0.6);
+        }
+    }
+}

@@ -2,40 +2,50 @@
 
 @section('content')
 
+<div class="container p-4">
+<div id="monitor">
+    <div id="monitorscreen">
+  
 <h1>Train departures</h1>
 
+<div class="row">
 
-<table class="table">
+<table class="table-striped">
     <thead>
       <tr>
-        <th scope="col">Company</th>
-        <th scope="col">Departure Station</th>
-        <th scope="col">Departure Date</th>
-        <th scope="col">Departure Time</th>
-        <th scope="col">Arrival Time</th>
-        <th scope="col">Train Code</th>
-        <th scope="col">Number of Wagons</th>
-        <th scope="col">On Time</th>
-        <th scope="col">Cancelled</th>
+        <th class="col px-3 text-center">Company</th>
+        <th class="col px-3 text-center">Departure Station</th>
+        <th class="col px-3 text-center">Arrival Station</th>
+        <th class="col px-3 text-center">Departure Date</th>
+        <th class="col px-3 text-center">Departure Time</th>
+        <th class="col px-3 text-center">Arrival Time</th>
+        <th class="col px-3 text-center">Train Code</th>
+        <th class="col px-3 text-center">Number of Wagons</th>
+        <th class="col px-3 text-center">On Time</th>
+        <th class="col px-3 text-center">Cancelled</th>
       </tr>
     </thead>
     <tbody>
         @foreach ($trains as $train)
       <tr>
-        <td>{{$train->company}}</td>
-        <td>{{$train->departure_station}}</td>
-        <td>{{$train->departure_date}}</td>
-        <td>{{$train->departure_time}}</td>
-        <td>{{$train->arrival_time}}</td>
-        <td>{{$train->train_code}}</td>
-        <td>{{$train->number_of_coaches}}</td>
-        <td>{{$train->on_time}}</td>
-        <td>{{$train->cancelled}}</td>
+        <td class="col px-3 py-2 text-center">{{$train->company}}</td>
+        <td class="col px-3 text-center">{{$train->departure_station}}</td>
+        <td class="col px-3 text-center">{{$train->arrival_station}}</td>
+        <td class="col px-3 text-center">{{$train->departure_date}}</td>
+        <td class="col px-3 text-center">{{$train->departure_time}}</td>
+        <td class="col px-3 text-center">{{$train->arrival_time}}</td>
+        <td class="col px-3 text-center">{{$train->train_code}}</td>
+        <td class="col px-3 text-center">{{$train->number_of_coaches}}</td>
+        <td class="col px-3 text-center">{{$train->on_time}}</td>
+        <td class="col px-3 text-center">{{$train->cancelled}}</td>
     </tr>
     @endforeach
     </tbody>
   </table>
-
+</div>
+</div>
+</div>
+</div>
 
 
 
