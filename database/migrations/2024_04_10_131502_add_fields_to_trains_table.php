@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('trains', function (Blueprint $table) {
             $table->string('company', 30);
             $table->string("departure_station", 30);
-            $table->string("arrival_tation", 30);
+            $table->string("arrival_station", 30);
             $table->date('departure_date');
             $table->time("departure_time");
             $table->time("arrival_time");
@@ -33,7 +33,8 @@ return new class extends Migration
         Schema::table('trains', function (Blueprint $table) {
             $table->dropColumn('company');
             $table->dropColumn("departure_station");
-            $table->dropColumn("arrival_tation");
+            $table->dropColumn("arrival_station");
+            $table->dropColumn('departure_date');
             $table->dropColumn("departure_time");
             $table->dropColumn("arrival_time");
             $table->dropColumn('train_code');
