@@ -19,15 +19,15 @@ class TrainSeeder extends Seeder
 
         for ($i = 0; $i < 8; $i++) {
             $newTrain = new Train();
-            $newTrain->company = 'Trenitalia';
-            $newTrain->departure_station = 'Agrigento';
-            $newTrain->arrival_tation = 'Palermo';
-            $newTrain->departure_time = '11:00';
-            $newTrain->arrival_time = '14.00';
-            $newTrain->train_code = 'H6RF';
-            $newTrain->number_of_coaches  = '5';
-            $newTrain->on_time = false;
-            $newTrain->cancelled = true;
+            $newTrain->company = $faker->company();
+            $newTrain->departure_station = $faker->city();
+            $newTrain->arrival_tation = $faker->city();
+            $newTrain->departure_time = $faker->time();
+            $newTrain->arrival_time = $faker->time();
+            $newTrain->train_code = $faker->randomNumber(4);
+            $newTrain->number_of_coaches  = $faker->randomDigitNotNull();
+            $newTrain->on_time = $faker->boolean();
+            $newTrain->cancelled = $faker->boolean();
 
             $newTrain->save();
         }
