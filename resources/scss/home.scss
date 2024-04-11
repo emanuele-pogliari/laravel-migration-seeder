@@ -15,7 +15,7 @@ th {
 }
 
 tr:nth-child(odd) {
-    background-color: rgb(52, 40, 40);
+    background-color: rgb(44, 34, 34);
 }
 
 #monitor {
@@ -25,4 +25,8 @@ tr:nth-child(odd) {
     border-radius: 10px;
     border-bottom-left-radius: 50% 2%;
     border-bottom-right-radius: 50% 2%;
+
+    .row {
+        background-color: #1d1e20;
+    }
 }
