@@ -5,9 +5,6 @@
 <div class="container-fluid p-5 d-flex justify-content-center ">
 <div id="monitor">
     <div id="monitorscreen mx-auto border border-2">
-  
-
-
 <div class="row border border-2 rounded pt-3">
     <h1 class="fs-1">Train departures</h1>
 <table class="table-striped ">
@@ -25,6 +22,12 @@
       </tr>
     </thead>
     <tbody>
+      @if(!isset($trains))
+        <tr>
+            <td colspan="10" class="text-center fs-2">No trains scheduled</td>
+        </tr>
+      @endif
+
         @foreach ($trains as $train)
       <tr>
         <td class="col px-2 py-2 text-center">{{$train->train_code}}</td>
