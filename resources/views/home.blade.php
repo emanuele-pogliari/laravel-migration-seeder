@@ -9,7 +9,7 @@
 
 
 <div class="row border border-2 rounded pt-3">
-    <h1>Train departures</h1>
+    <h1 class="fs-1">Train departures</h1>
 <table class="table-striped ">
     <thead>
       <tr>
@@ -40,6 +40,9 @@
     @endforeach
     </tbody>
   </table>
+  <div class="warning-text w-100">
+    <p class="fs-1 my-2 w-100">Mind the gap between the train and the platform!</p>
+    </div>
 </div>
 </div>
 </div>
